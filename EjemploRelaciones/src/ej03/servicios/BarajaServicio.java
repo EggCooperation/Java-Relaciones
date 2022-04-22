@@ -79,14 +79,19 @@ public class BarajaServicio {
             int ctrol = 0;
             for (Object aux : cartasEntregadas.getCartas()) {
                 parrafo = parrafo.concat(aux.toString());
-                parrafo = parrafo.concat(". ");
+                //parrafo = parrafo.concat(". ");  MALA VISUALIZACION
+                parrafo = parrafo.concat(".\n");
+                //MEJORA ESTÉTICA
                 ctrol++;
                 if (ctrol == 10) {
-                    System.out.println(parrafo);
+                   //System.out.println(parrafo);
+                    //SOUT no funcional
                     parrafo = "";
                     ctrol = 0;
                 }
             }
+            System.out.println(parrafo);
+            //MEJORA FUNCIONAL
         }
     }
 
@@ -100,9 +105,12 @@ public class BarajaServicio {
             for (Object aux : mazoInicial.getCartas()) {
                 parrafo = parrafo.concat(aux.toString());
                 parrafo = parrafo.concat(". ");
+                System.out.println(parrafo);
+                //Ubicación correcta
                 ctrol++;
                 if (ctrol == 10) {
-                    System.out.println(parrafo);
+                  //  System.out.println(parrafo);
+                    //SOUT no funcional
                     parrafo = "";
                     ctrol = 0;
                 }
