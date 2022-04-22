@@ -99,14 +99,16 @@ public class BarajaServicio {
             int ctrol = 0;
             for (Object aux : mazoInicial.getCartas()) {
                 parrafo = parrafo.concat(aux.toString());
-                parrafo = parrafo.concat(". ");
+                parrafo = parrafo.concat(".\n"); //Cambio estético
                 ctrol++;
                 if (ctrol == 10) {
-                    System.out.println(parrafo);
+                    //System.out.println(parrafo); SOUT NO FUNCIONAL
                     parrafo = "";
                     ctrol = 0;
                 }
             }
+            System.out.println(parrafo);
+            //CAMBIO FUNCIONAL
         }
     }
 
